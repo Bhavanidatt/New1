@@ -2,7 +2,9 @@
 #include<algorithm>
 using namespace std;
 
-
+bool comparison(int a, int b){
+    return a>b;
+}
 int umbrellacount(int people, int umb[], int s){
 
     cout << "Size is " << s << endl;
@@ -14,6 +16,7 @@ int umbrellacount(int people, int umb[], int s){
     for(k=0;k<people;k++){
         need[k]=0;
     }
+    sort(umb,umb+s,comparison);
     k=0;
     while(i<s){
 
